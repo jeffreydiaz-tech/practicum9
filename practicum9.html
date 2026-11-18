@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle Nest</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f4;
+            padding: 40px 24px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        /* Dark Green Running Bar */
+        .ticker-bar {
+            background-color: #1b432e;
+            border: 2px solid #52b788;
+            border-radius: 12px;
+            padding: 16px 20px;
+            overflow: hidden;
+            white-space: nowrap;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        .ticker-text {
+            display: inline-block;
+            color: #8ce0b3;
+            font-size: 20px;
+            font-weight: 700;
+            padding-left: 100%;
+            animation: slideAcross 12s linear infinite normal;
+        }
+
+        @keyframes slideAcross {
+            0% {
+                transform: translateX(0%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        /* White Card Below */
+        .info-card {
+            background-color: #ffffff;
+            border: 1.5px solid #8ce0b3;
+            border-radius: 12px;
+            padding: 28px 30px;
+            margin-top: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+        }
+
+        .info-card h2 {
+            font-size: 20px;
+            color: #163020;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .info-card p {
+            font-size: 14px;
+            color: #3a4f43;
+            line-height: 1.6;
+        }
+
+        .info-card code {
+            font-family: Consolas, Monaco, monospace;
+            background-color: #f1f5f3;
+            padding: 2px 5px;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Running Headline Bar -->
+        <div class="ticker-bar">
+            <div class="ticker-text">🧩 Puzzle Nest Live Alert: Welcome to Puzzle Nest Interactive Hub!</div>
+        </div>
+
+        <!-- Bottom Info Box -->
+        <div class="info-card">
+            <h2>Puzzle Nest Animation Events</h2>
+            <p>The headline above uses CSS <code>@keyframes</code> with <code>animation-iteration-count: infinite</code> and <code>animation-direction: normal</code> so that each cycle slides across and restarts cleanly from its initial point.</p>
+        </div>
+    </div>
+
+</body>
+</html>
